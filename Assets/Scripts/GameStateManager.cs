@@ -54,5 +54,7 @@ public class GameStateManager : MonoBehaviour
         timer += time;
         totalTime += time;
         totalFish += 1;
+
+        Debug.Log("AYE");
     }
 }

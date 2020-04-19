@@ -59,11 +59,11 @@ public class FishingPole : MonoBehaviour
                 audioSource.clip = reelClip;
                 audioSource.Play();
             }
-            else if (!floatable.currentFish || (floatable.currentFish && !floatable.currentFish.caught))
+            else if (!floatable.currentFish || (floatable.currentFish && !floatable.currentFish.caught) && !reelingIn)
             {
                 StartCoroutine(ReelInRoutine());
             }
-            else if (floatable.currentFish && floatable.currentFish.caught)
+            else if (floatable.currentFish && floatable.currentFish.caught && !reelingIn && !fighting)
             {
                 StartCoroutine(ReelInFishRoutine());
             }
@@ -168,9 +168,11 @@ public class FishingPole : MonoBehaviour
         fighting = false; 
     }
 
-
+    bool reelingIn;
     public IEnumerator ReelInRoutine()
     {
+        reelingIn = true;
+
         SoftJointLimit j = lineJoint.linearLimit;
 
         float t = 0;
@@ -242,8 +244,8 @@ public class FishingPole : MonoBehaviour
         {
             floatable.currentFish = null; 
         }
-        
 
+        reelingIn = false;
         lineCast = false;
     }
 }
