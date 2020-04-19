@@ -278,6 +278,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: b36d479740452934192fb6a900e46f08, type: 2}
   - {fileID: 2100000, guid: 56fac866ed3d5704baf6975c4ab28a25, type: 2}
   - {fileID: 2100000, guid: 19356ebea9f3dd74da62693f2fee56a9, type: 2}
+  time: 0
   audioSource: {fileID: 4381334045080636036}
   flap: {fileID: 8300000, guid: 12aa57329a7142343829f734d80903ce, type: 3}
 --- !u!82 &4381334045080636036
@@ -5116,7 +5117,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ae4bd2bfbe5feee409f42cd62343a844, type: 2}
+  - {fileID: 2100000, guid: b395b35f12b41ab488741aef70f062b6, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
